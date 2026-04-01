@@ -6,13 +6,13 @@ class QRIS extends Pembayaran implements Cetak {
 
     public function prosesPembayaran() {
         if ($this->validasi()) {
-            return "Pembayaran QRIS Rp {$this->jumlah} berhasil";
+            return "QRIS Rp " . $this->totalBayar();
         }
         return "Jumlah tidak valid";
     }
 
     public function cetakStruk() {
-        return "Struk QRIS: Rp {$this->jumlah}";
+        return "Struk QRIS: Rp " . $this->totalBayar();
     }
 }
 ?>

@@ -6,13 +6,13 @@ class Ewallet extends Pembayaran implements Cetak {
 
     public function prosesPembayaran() {
         if ($this->validasi()) {
-            return "Pembayaran E-Wallet Rp {$this->jumlah} berhasil";
+            return "E-Wallet Rp " . $this->totalBayar();
         }
         return "Jumlah tidak valid";
     }
 
     public function cetakStruk() {
-        return "Struk E-Wallet: Rp {$this->jumlah}";
+        return "Struk E-Wallet: Rp " . $this->totalBayar();
     }
 }
 ?>
